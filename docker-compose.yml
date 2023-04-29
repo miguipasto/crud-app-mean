@@ -1,0 +1,29 @@
+version: '3'
+services:
+
+  backend:
+    build:
+      context: ./BackEnd
+      dockerfile: Dockerfile
+    image: backend
+    container_name: backend
+    network_mode: host
+    environment:
+      - MONGO_URI=mongodb://localhost/database_web
+    depends_on:
+      - mongo
+
+  frontend:
+    build:
+      context: ./FrontEnd/Actividades
+      dockerfile: Dockerfile
+    image: frontend
+    container_name: frontend
+    network_mode: host
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    network_mode: host
+    volumes:
+      - ./BD:/data/db

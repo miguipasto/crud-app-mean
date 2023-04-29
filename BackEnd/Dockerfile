@@ -1,0 +1,21 @@
+FROM node:19.6.1-alpine
+
+WORKDIR /app/BackEnd
+
+COPY package*.json ./
+COPY server.js ./
+COPY ./bd/ ./
+COPY . .
+
+RUN npm install -g npm@9.6.2 ./
+RUN chmod +x ./bd/import.sh ./
+RUN apk add mongodb-tools
+
+# Agregar la ruta de instalación de MongoDB al PATH
+ENV PATH="${PATH}:/usr/bin"
+
+
+EXPOSE 4000
+
+
+CMD ["sh", "-c", "./bd/import.sh & npm start"]
