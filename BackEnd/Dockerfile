@@ -7,7 +7,7 @@ COPY server.js ./
 COPY ./bd/ ./
 COPY . .
 
-RUN npm install -g npm@9.6.2 ./
+RUN npm install ./
 RUN chmod +x ./bd/import.sh ./
 RUN apk add mongodb-tools
 
