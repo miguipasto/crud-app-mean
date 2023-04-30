@@ -13,6 +13,6 @@ Iniciar con "docker-compose build" y "docker-compose up"
 ![image](https://user-images.githubusercontent.com/127023319/235321023-35bfc48e-a084-4997-b32b-e7d8534bc3fb.png)
 
 ## Devolopers
-https://github.com/Carcalmoa
-https://github.com/henarmarino
-https://github.com/miguipasto
+- https://github.com/Carcalmoa
+- https://github.com/henarmarino
+- https://github.com/miguipasto
