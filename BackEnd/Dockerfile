@@ -15,7 +15,7 @@ RUN apk add mongodb-tools
 ENV PATH="${PATH}:/usr/bin"
 
 
-EXPOSE 4000
+EXPOSE 3000
 
 
 CMD ["sh", "-c", "./bd/import.sh & npm start"]
